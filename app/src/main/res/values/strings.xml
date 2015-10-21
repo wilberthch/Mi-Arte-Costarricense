@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Mi Arte Costarricense</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="Tags">
+        <item>Artesanías</item>
+        <item>Artesanos</item>
+
+    </string-array>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="artasanias_title">Artesanías</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lblNombreArtesano">Lucía Siklov</string>
+</resources>

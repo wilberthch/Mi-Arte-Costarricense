@@ -1,0 +1,129 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBackground"
+    android:textColor="@color/light"
+    tools:context="wems.org.miartecostarricense.ArtesanosFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblNombreArtesano"
+            android:textColor="@color/light"
+            android:layout_margin="20dp"
+            android:textSize="20sp"
+            android:id="@+id/lblNombre" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/zoey"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
+            android:layout_gravity="center"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo de Artesanía"
+                    android:textColor="@color/light"
+                    android:layout_margin="20dp"
+                    android:id="@+id/lblTipoArtesania" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ubicación"
+                    android:textColor="@color/light"
+                    android:layout_margin="20dp"
+                    android:id="@+id/lblUbicacion" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textColor="@color/light"
+                    android:layout_margin="20dp"
+                    android:id="@+id/lblEmail" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Teléfono"
+                    android:textColor="@color/light"
+                    android:layout_margin="20dp"
+                    android:id="@+id/lblTelefono" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jícaro"
+                    android:textColor="@color/light2"
+                    android:layout_margin="20dp"
+                    android:id="@+id/txtTipoArtesania" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cantón de Osa"
+                    android:textColor="@color/light2"
+                    android:layout_margin="20dp"
+                    android:id="@+id/txtUbicacion" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="wems@gmail.com"
+                    android:textColor="@color/light2"
+                    android:layout_margin="20dp"
+                    android:id="@+id/txtEmail" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="27888734"
+                    android:textColor="@color/light2"
+                    android:layout_margin="20dp"
+                    android:id="@+id/txtTTelefono" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>
