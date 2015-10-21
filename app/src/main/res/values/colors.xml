@@ -10,4 +10,6 @@
     <color name="darkBackground">#FF222222</color>
     <color name="light">#FFEEEEEE</color>
     <color name="light2">#B2A6A6</color>
+    <color name="blue">#00abea</color>
+    <color name="white">#fefefe</color>
 </resources>

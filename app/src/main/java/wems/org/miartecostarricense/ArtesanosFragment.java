@@ -1,11 +1,13 @@
 package wems.org.miartecostarricense;
 
 
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 
 /**
@@ -58,8 +60,24 @@ public class ArtesanosFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.fragment_artesanos, container, false);
+
+        LinearLayout galleria = (LinearLayout)view.findViewById(R.id.galleria);
+
+        galleria.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new GalleryFragment();
+                FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame, fragment)
+                        .commit();
+            }
+        });
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_artesanos, container, false);
+        return view;
     }
 
 

@@ -18,4 +18,13 @@
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="lblNombreArtesano">Lucía Siklov</string>
+
+    <string-array name="image_ids">
+        <item>@drawable/image_1</item>
+        <item>@drawable/image_2</item>
+        <item>@drawable/image_3</item>
+        <item>@drawable/image_4</item>
+        <item>@drawable/image_5</item>
+        <item>@drawable/image_6</item>
+    </string-array>
 </resources>
