@@ -1,6 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="#000"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FG"
+        android:textColor="@color/light"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_margin="20dp"
+        android:id="@+id/lblTituloNoticia" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha"
+                android:textStyle="bold"
+                android:textColor="@color/light"
+                android:textSize="10sp"
+                android:layout_margin="10dp"
+                android:id="@+id/lblFecha"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horario"
+                android:textStyle="bold"
+                android:textColor="@color/light"
+                android:textSize="10sp"
+                android:layout_margin="10dp"
+                android:id="@+id/lblhora"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción"
+                android:textStyle="bold"
+                android:textColor="@color/light"
+                android:textSize="10sp"
+                android:layout_margin="10dp"
+                android:id="@+id/lblDescripcion"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha"
+                android:textColor="@color/light"
+                android:textSize="10sp"
+                android:layout_margin="10dp"
+                android:id="@+id/txtFecha"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horario"
+                android:textColor="@color/light"
+                android:textSize="10sp"
+                android:layout_margin="10dp"
+                android:id="@+id/txthora"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción"
+                android:textColor="@color/light"
+                android:textSize="10sp"
+                android:layout_margin="10dp"
+                android:id="@+id/txtDescripcion"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

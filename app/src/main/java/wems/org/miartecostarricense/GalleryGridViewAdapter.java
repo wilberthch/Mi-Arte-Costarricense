@@ -14,13 +14,13 @@ import java.util.ArrayList;
 /**
  * Created by will on 10/21/15.
  */
-public class GridViewAdapter extends ArrayAdapter{
+public class GalleryGridViewAdapter extends ArrayAdapter{
 
     private Context context;
     private int layoutResourceId;
     private ArrayList data = new ArrayList();
 
-    public GridViewAdapter(Context context, int layoutResourceId, ArrayList data) {
+    public GalleryGridViewAdapter(Context context, int layoutResourceId, ArrayList data) {
         super(context, layoutResourceId, data);
         this.layoutResourceId = layoutResourceId;
         this.context = context;

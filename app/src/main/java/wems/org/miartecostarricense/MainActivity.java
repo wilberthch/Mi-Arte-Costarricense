@@ -108,6 +108,10 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_artesanias:
                 fragment = new ArtesaniasFragment();
                 break;
+
+            case R.id.nav_news:
+                fragment = new NewsFragment();
+                break;
         }
 
 

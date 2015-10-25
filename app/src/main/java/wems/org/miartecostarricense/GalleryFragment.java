@@ -30,7 +30,7 @@ public class GalleryFragment extends Fragment {
     private String mParam2;
 
     private GridView gridView;
-    private GridViewAdapter gridAdapter;
+    private GalleryGridViewAdapter gridAdapter;
 
 
     /**
@@ -72,7 +72,7 @@ public class GalleryFragment extends Fragment {
 
         gridView = (GridView) view.findViewById(R.id.gridView);
 
-        gridAdapter = new GridViewAdapter(view.getContext(), R.layout.grid_item_layout, getData());
+        gridAdapter = new GalleryGridViewAdapter(view.getContext(), R.layout.grid_item_layout, getData());
         gridView.setAdapter(gridAdapter);
         // Inflate the layout for this fragment
         return view;
