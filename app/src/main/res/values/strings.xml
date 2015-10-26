@@ -27,4 +27,30 @@
         <item>@drawable/image_5</item>
         <item>@drawable/image_6</item>
     </string-array>
+
+    <string-array name="tipos_artesanias">
+        <item>Alfarería</item>
+        <item>Tejidos en Cubaya</item>
+        <item>Tallas en Raiz deCafé</item>
+        <item>Cestería</item>
+        <item>Jícaros</item>
+        <item>Tejidos en telar</item>
+        <item>Maderas</item>
+        <item>Máscaras</item>
+    </string-array>
+
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
 </resources>
