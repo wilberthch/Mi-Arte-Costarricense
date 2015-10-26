@@ -12,5 +12,6 @@
     <color name="light2">#B2A6A6</color>
     <color name="blue">#00abea</color>
     <color name="white">#fefefe</color>
+    <color name="chatBackgroud">#E1E1E1</color>
     <color name="itemPressed">#00007F</color>
 </resources>

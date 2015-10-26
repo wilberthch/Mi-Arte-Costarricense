@@ -1,21 +1,23 @@
 package wems.org.miartecostarricense;
 
 
-import android.app.FragmentManager;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ArtesanosFragment#newInstance} factory method to
+ * Use the {@link ChatFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ArtesanosFragment extends Fragment {
+public class ChatFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -24,6 +26,9 @@ public class ArtesanosFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private EditText mNewMessage;
+    private ImageButton mNewMessageSend;
+    private ViewHolderAdapter mAdapter;
 
 
     /**
@@ -32,11 +37,11 @@ public class ArtesanosFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ArtesanosFragment.
+     * @return A new instance of fragment ChatFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ArtesanosFragment newInstance(String param1, String param2) {
-        ArtesanosFragment fragment = new ArtesanosFragment();
+    public static ChatFragment newInstance(String param1, String param2) {
+        ChatFragment fragment = new ChatFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -44,7 +49,7 @@ public class ArtesanosFragment extends Fragment {
         return fragment;
     }
 
-    public ArtesanosFragment() {
+    public ChatFragment() {
         // Required empty public constructor
     }
 
@@ -61,36 +66,39 @@ public class ArtesanosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_artesanos, container, false);
 
-        LinearLayout galleria = (LinearLayout)view.findViewById(R.id.galleria);
+        View view = inflater.inflate(R.layout.fragment_chat, container, false);
+        mAdapter = ListHelper.buildViewHolderAdapter(view.getContext(),
+                R.layout.chat_item);
+        ListView listView = (ListView) view.findViewById(R.id.list);
+        listView.setAdapter(mAdapter);
 
-        galleria.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment fragment = new GalleryFragment();
-                FragmentManager fragmentManager = getFragmentManager();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.content_frame, fragment)
-                        .commit();
-            }
-        });
+        final EditText newmsg = (EditText) view.findViewById(R.id.newmsg);
 
-        LinearLayout chat = (LinearLayout) view.findViewById(R.id.btnChat);
 
-        chat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment fragment = new ChatFragment();
-                FragmentManager fragmentManager = getFragmentManager();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.content_frame, fragment)
-                        .commit();
-            }
-        });
+        mNewMessage = (EditText) view.findViewById(R.id.newmsg);
+        mNewMessageSend = (ImageButton) view.findViewById(R.id.newmsgsend);
+        if (mNewMessageSend!=null){
+            mNewMessageSend.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    addItem();
+                    newmsg.setText("");
 
-        // Inflate the layout for this fragment
+                }
+            });
+        }
         return view;
+    }
+
+    private void addItem() {
+
+
+        Mensaje obj = new Mensaje("Frank",mNewMessage.getText().toString());
+        mAdapter.add(obj);
+
+        mAdapter.notifyDataSetChanged();
+
     }
 
 
